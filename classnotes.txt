@@ -1,0 +1,146 @@
+Static Response :
+if the response is not varied from time to time and person to pero
+then it is considered as static respose.
+
+Dynamic Response :
+if the response is varied from time to time and person to person
+then it is considered as dynamic response.
+
+Login.html/Login ::  static response
+update-Profile   ::  Dynamic Response
+check Balance    ::  Dynamic Response
+
+Java  - Spring Boot +  Database 
+JS    - Node JS,Express + Database
+.Net  - Asp.Net       + Database
+Python - Django + Database
+
+Framework  vs Library
+----------------------
+Framework  :  spring Boot(java), Asp.Net, Node JS,Express  
+-complete application development.
+Library    :  Bootstrap, React JS, JQuery
+
+
+Django: 
+------
+Django is a free and open-source web framework 
+It is writen in Python Language 
+Model-view-Template architecture pattern.
+Django-maintained by Django software foundation
+
+
+Storey behind Django:
+NewsPaper - Lowrence Journal
+djangoProject.com
+ 
+Available - 2005 July
+
+MVC and MVT 
+Python maintained by PSF
+
+
+Django Features:
+1.Fast:
+  Django was designed to help developer/programmer
+  take application from concept to completion
+  as quick as possible.
+  
+2.Secure: Cross-Site Request Forgery,
+
+3.Full Loaded:
+  django provide common web development tasks like user auth
+  content management/adminstaration, site map, RSS.
+  
+
+4.Scalable:
+  to meet heavy trafic demands, django has abiltiy.
+5.Versatile: ecom,web appl, social media web apps, cms
+===================================================
+
+Sequence of activities:
+
+
+>python --version
+>py -m django --vesion 
+
+install django using -pip/pip3 
+
+pip install django 
+
+
+Project = collection of applications + configuratin info
+
+How to create django project:
+---------------------------
+create virtual env :
+-------------------------------------
+python -m venv django-env
+
+django-env\Scripts\activate
+
+pip install django
+
+python.exe -m pip install --upgrade pip
+
+>django-admin startproject firstproject
+
+manage.py:
+The most commonly used python script file is manage.py
+command line utililty to interact Django Project in various ways
+like - run server, run test cases, create migration, create users 
+
+__init__.py
+it is blank/empty python file.Django treated as current folder is python package.
+
+asgi.py : application server gateway interface
+wsgi.py : web server gateway interface.
+          we can use this file setting, while deploying the application in production
+
+		  
+settings.py : we have to specify all our project settings 
+and configuration like, installed apps, middleware info, database configuratin info.
+
+
+urls.py: 
+store all our application url-patterns.  
+
+=============================
+Create First Web application.
+
+startproject
+startapp 
+runserver 
+
+step1:>django-admin startproject hdfcproject
+step2:hdfcproject>py manage.py startapp userapp
+
+	  
+step3:runserver 
+
+
+manage.py:
+        It is commandline utility, to interact with django project.
+		
+		py manage.py startapp 
+		py manage.py runserver 
+		py manage.py makemigrations
+		py manage.py migrate
+		py manage.py createsuperuser 
+		
+		run testcase 
+		etc .
+		
+	
+
+Create a view for applicationin views.py 
+
+View is responsible to preate requied response.
+How to prepare required responses.
+
+render()
+HttpResponse()
+
+2 Types of views
+1)Functional Based views 
+2)Class based views
