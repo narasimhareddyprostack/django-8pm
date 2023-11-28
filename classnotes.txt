@@ -144,3 +144,72 @@ HttpResponse()
 2 Types of views
 1)Functional Based views 
 2)Class based views
+
+
+==========================================
+Static (Response) website using Django Application.
+Home About Service Contact Login 
+http:127.0.0.1:8000/index
+http:127.0.0.1:8000/about
+http:127.0.0.1:8000/service
+http:127.0.0.1:8000/contact
+http:127.0.0.1:8000/login
+
+
+https://retail.onlinesbi.sbi/retail/login.htm -
+
+not  varied from user to user and time to time.
+==============================================
+Step1:create virutal env and activate
+     python -m env xyz
+     xyz/Scripts/activate
+
+step2:create project/startproject
+      django-admin startproject hdfcproject 
+
+step3:create app/startapp 
+      cd hdfcproject
+      py manage.py startapp webapp
+
+Note:apply migrations
+      py manage.py migrate 
+
+step4:runserver
+      py manage.py runserver 
+
+
+What is manage.py?
+
+command line utililty tool, to interact with django web server/appliation.
+
+We are defining URL Patterns at project level.
+
+New Requirement is?
+
+We need to define URL Patterns at application level?
+
+===============================================
+startproject
+startapp
+runserver 
+
+project can contains - mutliple appliations, 
+each application contains views.
+
+webapp-views.py(members)  10
+userapp-views.py   - 20
+paymentapp-views.py -39
+logapp-views.py -40
+
+defining url-pattern for all views of all appliations inside project urls.py file,
+
+project creates - maintance problems
+It reduce reusability.
+
+
+Sol : Define url pattern at appliation level?
+
+
+
+
+
