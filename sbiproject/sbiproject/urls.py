@@ -18,10 +18,13 @@ from django.contrib import admin
 from django.urls import path, include
 
 
-from userapp import urls
-
+# from userapp import urls
+# from webapp import urls
+import userapp
+import webapp
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("user/", include(urls)),
-    path("product/", include(urls))
+    path('user/', include('userapp.urls')),
+    path('web/', include('webapp.urls'))
+
 ]

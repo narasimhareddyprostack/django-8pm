@@ -212,4 +212,8 @@ Sol : Define url pattern at appliation level?
 
 
 
+Advantages:
+The main Advantage of defining urlpattern at application insted of project level are
+1) It promotes reusability of Django Application across multiple projects
+2) Project level urls.py file, will be clean and more readable.
 
