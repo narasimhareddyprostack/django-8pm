@@ -1,5 +1,5 @@
 """
-URL configuration for sbiproject project.
+URL configuration for staticproject project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -17,10 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-import userapp
-import webapp
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('user/', include('userapp.urls')),
-    path('web/', include('webapp.urls'))
+    path('web/', include('webapp.urls')),
 ]

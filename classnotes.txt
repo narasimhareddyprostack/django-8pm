@@ -217,3 +217,54 @@ The main Advantage of defining urlpattern at application insted of project level
 1) It promotes reusability of Django Application across multiple projects
 2) Project level urls.py file, will be clean and more readable.
 
+Create static website using Djago
+=================================
+python
+django 
+
+venv 
+
+>django-admin startproject staticproject
+
+>cd startproject
+
+>py manage.py startapp webapp 
+
+>py manage.py migrate
+
+>py manage.py runserver
+
+localhost:8000/web/index   - index.html
+localhost:8000/web/about   - about.html
+localhost:8000/web/service   - service.html
+localhost:8000/web/contact   - contact.html
+
+Defing url patterns (urls.py) at project level
+Defing url patterns (urls.py) at appliation level
+==================================================
+What is djanog views.py?
+what is view?
+it handle request, prepare response.
+How to prepare response?
+	HttpResponse 
+	render
+
+django views - we can create two ways?
+class based views
+function based views?
+
+once views are ready?
+we have to define urlpatterns?
+
+How to define url-patterns?
+Where to define url-pattern?
+We can define url patterns/urls.py at project level?
+We can define url patterns/urls.py at Application level?
+
+
+
+
+
+
+
+
