@@ -261,7 +261,20 @@ Where to define url-pattern?
 We can define url patterns/urls.py at project level?
 We can define url patterns/urls.py at Application level?
 
+===========================================
+Template Tags: {{}}
 
+pyton views.py - we can inject dynamic content to templates file using template tags.
+Template tags or template variables.
+
+how to Send data from views to template?
+==========================================
+render(1,2,3)
+render(request,'index.html', context={'one':100,'two':200})
+
+
+Working with Database?
+=======================
 
 
 
