@@ -274,7 +274,116 @@ render(request,'index.html', context={'one':100,'two':200})
 
 
 Working with Database?
-=======================
+======================
+we required to interact with databases to store our application data and retrive our stored data.
+
+Create New Employee: insert data into database table.
+get all employee   : retrive the our store data 
+
+Django provide inbuild database ie sqlite3
+
+small to medium application thsi database is enough.
+django will support other databases like oracle db,mysql db, pg, maria db, mongo db etc.
+
+How to configure Database?
+==========================
+Django by default provides sqlite3 database. If we want to use this database, we are not required to do any configution.
+
+default sqlite3 configutions in - settings.py
+==============================================
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
+New Requirement?
+if we dont want to connect sqlite3 database, we want configure mysql database.
+
+ENGINE
+Name
+USER
+PASSWORD
+HOST
+PORT
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'crud',
+        'USER': 'root',
+        'PASSWORD': 'root'
+    }
+}
+
+checking configurations?
+============================
+How to check db connection success or not?
+
+>py manage.py shell
+interactive console
+>> from django.db import connection
+>>con=connection.cursor()
+
+Note: if we are not getting any error means 
+db connection success.
+
+
+import pymysql
+pymysql.install_as_MySQLdb()
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'crud',
+        'USER': 'root',
+        'PASSWORD': 'root'
+    }
+}
+
+What is Model class?
+A Model is a python class, which contanis database information
+Each model maps to one database table.
+Every model is a python class, which is the child class of django.db.models.Model class.
+Each attribute of model class, represents a database field.
+========================================
+Where are writing model classes? inside models.py 
+
+Note: Model class will be converted into database table.
+CRUD - database name.
+
+makemigrations vs migrate
+ 
+
+ class Employee(models.Model):
+    eno = models.IntegerField()
+    ename = models.CharField(max_length=24)
+    esal = models.FloatField()
+
+	
+	
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'crud',
+        'USER': 'root',
+        'PASSWORD': 'root'
+    }
+}
+
+
+import pymysql
+pymysql.install_as_MySQLdb()
+
+
+admin.site.register(Employee)
+
+
+
+
+
 
 
 
