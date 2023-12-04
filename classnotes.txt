@@ -380,6 +380,32 @@ pymysql.install_as_MySQLdb()
 
 admin.site.register(Employee)
 
+==========================================
+create superuser?
+
+py manage.py createsuperuser
+
+username
+emailid
+password
+
+login into django application
+127.0.0.1:8000/admin   - enter the credentials 
+
+
+=========================================
+Develop Template Based Application
+1)Create of Project
+2)Create of Application
+3)Add this appliation to the project in settings.py,
+  so that Django aware of application.
+4)Create a 'templates' folder inside a main project folder.
+5)Add templates folder to settings.py file,
+  so that Django can aware of our templates.
+6)Create an html file inside templates folders.
+7)Define function based view inside views.py
+8)Define url pattern either at application or at project level
+9)Run server and Test urls.
 
 
 
