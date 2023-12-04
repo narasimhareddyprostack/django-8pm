@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Employee Data</h3>
+    {% if emp_list %}
+            <table border="2">
+                <thead>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Salary</th>
+                </thead>
+                <tbody>
+                    {% for emp in emp_list %}
+                        <tr>
+                            <td>{{emp.eid}}</td>
+                            <td>{{emp.ename}}</td>
+                            <td>{{emp.esal}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+    {% else %}
+    <p>No Data</p>
+    {% endif %}
+</body>
+</html>

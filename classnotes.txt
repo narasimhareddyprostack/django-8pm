@@ -406,8 +406,86 @@ Develop Template Based Application
 7)Define function based view inside views.py
 8)Define url pattern either at application or at project level
 9)Run server and Test urls.
+=============================================
+Create Employee Model class and Django, Application.
+Insert Employee Data in Django using Django-Admin dashboard,
+Display Employee Data in UI/template file(employee html).
 
+1.startproject 
+  django-admin startproject dbemp
+2.startapp
+   cd dbemp
+   py manage.py startapp empapp 
+   
+   Register your app in project 
 
+3.configure database
+  How to configure?
+  
+  pip install pymysql
+  pymysql.install_as_MySQLdb()
+  
+  
+  update DATABASES settings - project/settings.py 
+  
+  
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'pro8pm',
+        'USER': 'root',
+        'PASSWORD': 'root'
+    }
+}
+
+  
+4.how to Check database configuration
+  py manage.py shell
+  using connection object 
+  from django.db import connection
+  con=connection.cursor()
+  
+  Note:if your are not geting any error mens connection success.
+  
+5.Create Employee Model 
+
+  class Employee(models.Model):
+		eid = models.IntegerField()
+		ename =models.charField(max_length=32)
+		esal = models.floatField()
+6.Register your models admin.py 
+
+	admin.site.register(Employee)
+	
+7.apply migrations.
+  makemigrations
+  migrate
+  
+  difference between makemigrations and migrate
+  makemigrations is - responsible to generate sql code for python model class
+  migrate is- responsiblity to execute sql code, table will be created in database
+
+8.insert employee data using django-adminstration/dashboard
+  py manage.py createsuperuser
+  username :
+  email id :
+  password:
+9. Run Django server
+>py manage.py runserver
+
+10.Display employee data in template file.  
+  127.0.0.1:8000/emp 
+  
+  views.py
+  
+  def empdata(request):
+    emp_list = Employee.objects.all()
+    emp_dict = {'emp_list': emp_list}
+    return render(request, 'emp.html', context=emp_dict)
+
+  emp.html
+  ========
+  
 
 
 
