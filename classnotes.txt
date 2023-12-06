@@ -485,12 +485,31 @@ DATABASES = {
 
   emp.html
   ========
-  
+ 
+ Django Forms:
+ ========================
+ Web Development - form are very imp 
+ To take user data/input , we required form.
+ 
+ Django Form(Form Class based, ModelForm based)
+ ----------------------------------------------
+ We can develop forms very easy with python  code.
+ We are generating form widget/containers(input, textare, dropdown)
+ validating data will become very easy. 
+ Processing data into python like list,set 
+ 
+ 
+ forms.Form 
+ forms.ModelForm  
+ 
+ models.Model 
 
-
-
-
-
+ Step 1: create forms.py file in our application folder with required fields
+ 
+ forms.py 
+ 
+ class EmpForm(forms.Form):
+	pass
 
 
 
