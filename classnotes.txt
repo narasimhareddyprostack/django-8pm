@@ -504,12 +504,95 @@ DATABASES = {
  
  models.Model 
 
- Step 1: create forms.py file in our application folder with required fields
+ Step 1: create forms.py file in our application folder with required fields.
  
  forms.py 
  
  class EmpForm(forms.Form):
 	pass
 
+
+=====================
+How to handle forms in Django?
+Django - form handling?
+
+save data into respective model/table?
+
+Task 1: create employee form and save data in to database?
+
+Step 1: django-admin startproject empproj
+step 2: cd empproj
+        py manage.py startapp emp 
+		
+		register your app in empproject 
+		
+step 3:create model in empapp 
+       models.py 
+	   
+	   class Employee(models.Model):
+			 eid=IntegerField()
+			 ename=CharField(max_length=32)
+			 esal = IntegerField()
+step 4:register your model in admin.py 
+       admin.site.register(Employee)
+step 5: create emp form - based on ModelForm
+         create forms.py file in empapp 
+		 
+		 and employee form 
+		 
+		 
+   
+step 6:Define urls
+       application/project urls @ project level 
+	   
+	   
+	   empproj/urls.py
+	   urlpatterns=[
+	   path('',views.gethomepage),
+	   path('registration/',views.getempregpage),
+	   path('saveemp',views.getsaveemppage,name='saveemp')
+	   
+	   ] 
+	   
+step 7: What is views?
+        handle request, and prepare response
+		Functional based views 
+		
+		def gethomepage(request):
+			#return render(1,2)
+			return render(request,'home.html')
+		
+step 8:create templates
+       specify path 
+	   
+step 9:apply makemigrations and migrate
+
+step 10:create super user to  access adminstration/dashboard
+
+step 11:Test app 
+         save employee form data?
+		 
+		 How to save employee form data.
+		 
+		 
+		 
+We are creating forms?
+
+based on Form/ModelForm?
+=====================================
+complete CRUD based Django Framework.
+Step 1:django-admin startproject crud
+step 2:cd crud 
+       py manage.py startapp emp app 
+	   
+step 3: register your empapp in project/settings.py
+
+project structurre:
+1)urls.py /project level 
+2)views.py /app level 
+3)models.py/app level
+  register your created model in admin.py
+4)forms.py /app level 
+5)application tempaltes 
 
 
