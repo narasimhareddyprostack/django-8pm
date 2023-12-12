@@ -596,3 +596,24 @@ project structurre:
 5)application tempaltes 
 
 
+================================
+Class Based Views
+===================
+There are 2 types views
+1)Functional Based views 
+2)class Based views 
+
+note: Class based views introduced in Django 1.3 version,
+      to impplemnets Generic Views
+
+	  
+def getloginpage(request):
+	pass
+	
+from django.views.generic import View 
+class HelloWorldView(View):
+	def get(self,request):
+	    return HttpResponse("<h1>HelloWorld")
+	
+	
+Note: While defining class Based views, we have to extends View class
