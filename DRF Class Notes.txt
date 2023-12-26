@@ -1,0 +1,103 @@
+What DRF?
+
+MVT - Arch
+
+To Develop Web Api? DRF.
+
+API?
+Application Programming Interface?
+REST 
+Representation State Trasfer 
+Webservice(SOAP)  - alternative and light weight - RESt API
+
+What DRF? 
+powerful and flexible toolkit for building Web API/REst APIs.
+
+Serialization?
+
+Python Data Types(dict)    -  JSON.
+
+
+JSON/XML - data exachage format.
+what JSON ?
+group of key:value pairs as one entity.
+JSON - Java script Data types 
+
+JSON - Python Dict 
+
+Python dict - Json 
+
+
+emp = {'eid':101,
+       'ename':'Rahul',
+	   'avail':True
+	  }
+
+	  
+	 {  "eid":101,
+       "ename":"Rahul",
+	   "avail":true
+	  }
+	  
+
+Python Data Types 14:
+
+Javascript Data Types: 8
+Primitive and Non -Primitive Data types
+
+
+Table - QuerySet       - Python List(dict object)
+Row  -  Model Instance - Python dict 
+
+
+DRF?
+-Serializer 
+-ViewSet
+-Router
+
+========================
+React JS 
+===================================
+Pre-Req
+1.Python Basics, DJango F/W 
+2.JSON 
+3.Post Man /VS Code Thunder client 
+  To Test Rest API 
+  
+Step 1: django-admin startproject drfproj 
+Step 2: py manage.py startapp drfapp
+        pip install djangorestframework
+
+step3: register your app, and rest-f/w 
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'drfapp',
+    'rest_framework'
+]
+
+Step 4: update DB settings 
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': '8pm',
+        'USER': 'root',
+        'PASSWORD': 'root'
+    }
+}
+
+import pymysql
+pymysql.install_as_MySQLdb()
+
+
+Step 5:makemigrations and migrate 
+Step 6:createsuperuser - to access admin page 
+
+==============================================
+

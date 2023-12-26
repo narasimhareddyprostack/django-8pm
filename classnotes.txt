@@ -616,4 +616,7 @@ class HelloWorldView(View):
 	    return HttpResponse("<h1>HelloWorld")
 	
 	
-Note: While defining class Based views, we have to extends View class
+Note: 
+1)While defining class Based views, 
+      we have to extends View class.
+2) 
