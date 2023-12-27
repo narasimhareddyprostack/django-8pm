@@ -100,4 +100,57 @@ Step 5:makemigrations and migrate
 Step 6:createsuperuser - to access admin page 
 
 ==============================================
+How to test Rest api?
+using post man tools
 
+
+
+CRUD - API using DRF 
+
+Create 
+  API URL : 127.0.0.1:8000/api/add
+  Method Type:POST
+  Required Field: eid,ename,esal 
+  Access Type:public
+Read
+API URL : 127.0.0.1:8000/api/
+  Method Type:GET
+  Required Field: 
+  Access Type:public
+Update 
+ API URL : 127.0.0.1:8000/api/update/1
+ Method Type:POST
+ Required Field: eid,ename,esal 
+ Access Type:public
+Delete
+ API URL : 127.0.0.1:8000/api/delete/1
+ Method:DELETE
+ Required: Id
+ Access Type:Public
+ 
+ 
+DRF : Serializers 
+What is Serializer?
+
+Serializers helps to convert complex data such
+as QuerySet and Model Instance to Python Native Data Types.
+Which can be rendered very easily JSON/XML format.
+
+
+Step 1: django-admin startproject empproj
+Step 2: py manage.py startapp empapp
+        #pip install djangorestframework
+
+step3: register your app, and rest-f/w 
+
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'empapp',
+    'rest_framework'
+]
